@@ -36,6 +36,7 @@ export const CAMERA_FOV = 45
 export const CAMERA_DISTANCE_XZ = 4.6 // distance from cream column on XZ
 export const CAMERA_HEIGHT_OFFSET = -0.3 // camera Y relative to cream top
 export const CAMERA_LOOK_OFFSET = -1.2 // lookAt Y relative to cream top
+export const IDLE_CAMERA_LOOK_OFFSET = -0.7 // keep the cone closer to the vertical center before play starts
 export const CAMERA_FOLLOW_LERP = 0.08
 
 // Lever

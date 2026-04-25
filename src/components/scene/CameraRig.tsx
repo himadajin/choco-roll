@@ -8,6 +8,7 @@ import {
   CAMERA_LOOK_OFFSET,
   CONE_HEIGHT,
   CREAM_BASE_Y,
+  IDLE_CAMERA_LOOK_OFFSET,
 } from '../../game/constants'
 import { useGame } from '../GameProvider'
 
@@ -30,7 +31,8 @@ export function CameraRig() {
           : CREAM_BASE_Y
 
     const desiredCamY = focusY + CAMERA_HEIGHT_OFFSET
-    const desiredLookY = focusY + CAMERA_LOOK_OFFSET
+    const desiredLookY =
+      state.phase === 'idle' ? focusY + IDLE_CAMERA_LOOK_OFFSET : focusY + CAMERA_LOOK_OFFSET
 
     cam.position.x += (0 - cam.position.x) * CAMERA_FOLLOW_LERP
     cam.position.z += (CAMERA_DISTANCE_XZ - cam.position.z) * CAMERA_FOLLOW_LERP
