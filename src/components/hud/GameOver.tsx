@@ -7,6 +7,8 @@ export function GameOver() {
 
   return (
     <div
+      role="dialog"
+      aria-label="Game Over"
       style={{
         position: 'absolute',
         inset: 0,
@@ -15,24 +17,37 @@ export function GameOver() {
         alignItems: 'center',
         justifyContent: 'center',
         gap: 24,
-        background: 'rgba(0,0,0,0.5)',
+        background: 'rgba(0,0,0,0.55)',
+        pointerEvents: 'auto',
+        userSelect: 'none',
       }}
     >
-      <div style={{ color: '#fff', fontSize: 28, fontWeight: 'bold' }}>GAME OVER</div>
-      <div style={{ color: '#ffd700', fontSize: 40, fontWeight: 'bold' }}>
+      <div style={{ color: '#fff', fontSize: 28, fontWeight: 800, letterSpacing: 2 }}>
+        GAME OVER
+      </div>
+      <div
+        style={{
+          color: '#ffd95a',
+          fontSize: 44,
+          fontWeight: 800,
+          fontVariantNumeric: 'tabular-nums',
+        }}
+      >
         {state.score.toFixed(1)} cm
       </div>
       <button
+        type="button"
         onClick={() => dispatch({ type: 'RESTART' })}
         style={{
-          padding: '12px 40px',
+          padding: '12px 36px',
           fontSize: 18,
-          fontWeight: 'bold',
+          fontWeight: 700,
           background: '#e74c3c',
           color: '#fff',
           border: 'none',
-          borderRadius: 8,
+          borderRadius: 10,
           cursor: 'pointer',
+          touchAction: 'manipulation',
         }}
       >
         RESTART
