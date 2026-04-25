@@ -7,10 +7,7 @@ interface State {
   score: number
 }
 
-type Action =
-  | { type: 'START' }
-  | { type: 'COLLAPSE'; score: number }
-  | { type: 'RESTART' }
+type Action = { type: 'START' } | { type: 'COLLAPSE'; score: number } | { type: 'RESTART' }
 
 const initialState: State = { phase: 'idle', score: 0 }
 
@@ -36,11 +33,7 @@ const GameContext = createContext<GameContextValue | null>(null)
 
 export function GameProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(reducer, initialState)
-  return (
-    <GameContext.Provider value={{ state, dispatch }}>
-      {children}
-    </GameContext.Provider>
-  )
+  return <GameContext.Provider value={{ state, dispatch }}>{children}</GameContext.Provider>
 }
 
 export function useGame() {

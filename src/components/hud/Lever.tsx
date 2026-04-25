@@ -6,17 +6,19 @@ export function Lever() {
   if (state.phase !== 'idle') return null
 
   return (
-    <div style={{
-      position: 'absolute',
-      right: 24,
-      top: '50%',
-      transform: 'translateY(-50%)',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      gap: 8,
-      userSelect: 'none',
-    }}>
+    <div
+      style={{
+        position: 'absolute',
+        right: 24,
+        top: '50%',
+        transform: 'translateY(-50%)',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 8,
+        userSelect: 'none',
+      }}
+    >
       <div style={{ fontSize: 12, color: '#555' }}>PULL</div>
       {/* TODO: ドラッグでゲーム開始するレバーUIを実装する */}
       <button

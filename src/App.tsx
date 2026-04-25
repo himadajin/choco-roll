@@ -10,14 +10,16 @@ const MOBILE_WIDTH = 390
 
 export default function App() {
   return (
-    <div style={{
-      position: 'relative',
-      width: MOBILE_WIDTH,
-      maxWidth: '100vw',
-      height: '100%',
-      background: '#fff',
-      overflow: 'hidden',
-    }}>
+    <div
+      style={{
+        position: 'relative',
+        width: MOBILE_WIDTH,
+        maxWidth: '100vw',
+        height: '100%',
+        background: '#fff',
+        overflow: 'hidden',
+      }}
+    >
       <GameProvider>
         <Canvas
           camera={{ position: [0, 4, 8], fov: 50 }}

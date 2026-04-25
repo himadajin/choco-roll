@@ -6,19 +6,19 @@ export function GameOver() {
   if (state.phase !== 'collapsed') return null
 
   return (
-    <div style={{
-      position: 'absolute',
-      inset: 0,
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: 24,
-      background: 'rgba(0,0,0,0.5)',
-    }}>
-      <div style={{ color: '#fff', fontSize: 28, fontWeight: 'bold' }}>
-        GAME OVER
-      </div>
+    <div
+      style={{
+        position: 'absolute',
+        inset: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 24,
+        background: 'rgba(0,0,0,0.5)',
+      }}
+    >
+      <div style={{ color: '#fff', fontSize: 28, fontWeight: 'bold' }}>GAME OVER</div>
       <div style={{ color: '#ffd700', fontSize: 40, fontWeight: 'bold' }}>
         {state.score.toFixed(1)} cm
       </div>
